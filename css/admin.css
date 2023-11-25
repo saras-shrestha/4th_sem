@@ -1,0 +1,307 @@
+*{
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+text-decoration: none;
+box-sizing: border-box;
+user-select: none;
+}
+
+/*NAVBAR START*/ 
+.sidebar{
+    height:100%; 
+    width:250px;
+    position:fixed;
+    left: 0;
+    top: 0;
+    background: rgba(24, 22, 26, 0.905);
+    color:#000;
+    overflow-y: hidden;
+}
+.sidebar-header{
+    background-color: grey;
+    height:60px;
+    text-align: center; 
+    margin-bottom: 30px;
+}
+.sidebar-header h1{
+font-size: 22px;
+color: white;
+padding: 20px 0; 
+}
+.sidebar-menu ul li {
+    list-style-type: none;
+    line-height: 45px;
+    transition: 0.5s ease-in-out;
+}
+.sidebar-menu ul li a{
+    margin-left: 30px;
+   color: lightgrey;
+   font-size: 18px;   
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.sidebar-menu ul li:hover{
+    border-left: 3px solid white;
+    background: grey;
+}
+.sidebar-menu ul li:hover > a{
+ color:white;
+ font-size:19px;
+}
+.sidebar-menu ul li ul{
+    display:none;
+}
+.sidebar-menu ul li:hover > ul{
+    display: block;
+}
+.sidebar-menu ul ul li{
+    padding-left: 20px;
+    margin-bottom:10px;
+    line-height: 20px;
+}
+.sidebar-menu ul ul li:hover{
+    font-size: 16px;  
+     border:none;
+}
+/*NAVBAR END*/
+.welcome-note{
+    margin-left: 30rem;
+}
+.container{
+    position: relative;
+    margin-left:240px;
+}
+.header{
+    position:fixed;
+    left:240px;
+    top: 0;
+    z-index:100px;
+    width: calc(100% - 240px);
+    background:#fff;
+    height:60px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+}
+.header .welcome-note{
+    display: inline-block;
+}
+.header .logout{
+    display: inline-block;
+    margin-right: 20px;
+}
+.main-content{
+    margin-top: 60px;
+    background: #f1f5f9;
+    min-height:90vh;
+    padding: 1rem;
+}
+.dash-title{
+    margin-bottom: 1rem;
+}
+
+/* dashboard cards start */
+.dash-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1.5fr);
+    grid-column-gap: 4rem;
+    grid-row-gap:4rem;
+}
+.dash-single{
+    background: #fff;
+    border-radius:7px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.card-body{
+    padding: 1rem .1rem;
+    display:flex;
+}
+.card-body div{
+    font-size:1.3rem;
+    text-align: center;
+    margin:5px auto;
+    color:rgb(39, 31, 31);
+}
+
+.card-footer{
+    padding: .5rem 1rem;
+    background: #ebedf0;
+}
+.card-footer a{
+    color: black;
+    display: block;
+    text-align:center;
+    
+}
+/* dashboard cards end */
+
+/* semester */
+.container .main-content .semester,.course,.faculty,.timeslot, .assignFaculty, .select_sem, .profile, .preferences{
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.2);
+}
+input, select{
+    padding: 5px;
+    width:30%;
+    margin: 10px;
+}
+
+input[type="reset"]{
+    width:10%;
+}
+input[type="submit"]{
+    width:25%;
+}
+.search input[type="submit"]{
+    width:auto;
+}
+input[type="checkbox"]{
+    width:auto;
+}
+/* input type=time*/
+input[type='time']{
+    width:8rem;
+    font-size: 16px;
+}
+/*list display*/
+.container .main-content .display{
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    padding: 1rem;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.2);
+    max-height:1200px;
+}
+/*.container .main-content .dispaly table{
+    width:200px;
+
+}*/
+ table{
+    width:100%;
+    border:none;
+    border-collapse: collapse;
+    background:rgb(206, 206, 206);
+ }
+ table td, table th{
+    width:auto;
+    height:40px;
+    text-align:center;
+    border-bottom:2px solid rgb(186, 170, 170);
+    
+}
+tr{
+    background:rgb(255, 255, 255);
+}
+
+.admin tr td:nth-last-child(2){
+    width:75px;
+    
+}
+.admin tr td:nth-last-child(1){
+    width:75px;
+}
+.users tr td:nth-last-child(1){
+    width:170px;
+}
+.edit{
+    background:rgba(7, 255, 61, 0.604);
+    width:75px;
+    padding: .5rem 0;
+    text-align: center;
+    
+}
+.delete{
+    background:rgba(230, 10, 10, 0.583);
+    width:75px;
+    padding: .5rem 0;
+    box-sizing: border-box;
+}
+.display #schedule{
+    width: 100%;
+    border: 1px solid black;
+}
+.display #schedule td, .display #schedule th{
+    padding:10px 0;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+input.approve{
+    background:rgba(7, 255, 61, 0.604);
+    padding: .5rem 0;
+    margin:0;
+    width:80px;
+}
+input.reject{
+    background:rgba(230, 10, 10, 0.583);
+    padding: .5rem 0;
+    margin:0;
+    width:80px;
+}
+table.update-profile td, table.update-profile th , table.change-pass td, table.change-pass th{
+    margin:0;
+    text-align: left;
+    padding:5px;
+    border-style: none;
+}
+table.update-profile, table.change-pass{
+    table-layout: auto; 
+    width: 50%; 
+}
+table.update-profile input, table.change-pass input{
+    width: 20rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+table.update-profile input[type="submit"], table.change-pass input[type="submit"]{
+ width :50%;
+ font-weight: bold;
+ cursor: pointer;
+ background-color :green;
+}
+table.update-profile input[type="reset"], table.change-pass input[type="reset"]{
+ width :30%;
+ font-weight: bold;
+ cursor: pointer;
+ background-color :red;
+}
+table.update-profile select, table.change-pass select{
+ width :320px;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+/*users-profile.php*/
+.users-profile{
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.2);
+    width:60%;
+    margin: auto;
+}
+.users-profile li{
+    margin: 25px;
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+.users-profile h2{
+    text-align: center;
+}
+
+/*validation*/
+.Err{
+    color: rgba(255,0,0,1);
+    font-size: 12px;
+}
+
+/*contact and email display class='info'*/
+.info{
+    border:1px solid black !important;
+    margin-top:10px;
+}
+
